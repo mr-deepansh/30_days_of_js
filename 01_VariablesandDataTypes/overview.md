@@ -1,4 +1,4 @@
-# JavaScript Basics: Variable Declarations and Data Types
+# Day 1 : Variable Declarations and Data Types
 
 ## Introduction
 
