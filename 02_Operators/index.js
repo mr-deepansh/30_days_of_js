@@ -82,3 +82,53 @@ let age = 20;
 let isAdult = age >= 18 ? "You are an adult" : "You are not an adult";
 console.log("Task 14 Results:");
 console.log(isAdult);
+
+//* frequent questions
+
+let number1 = 30;
+let number2 = 20;
+
+let sum1 = number1 + number2;
+let difference = number1 - number2;
+let multiple = number1 * number2;
+let division = number1 / number2;
+let remind = number1 % number2;
+
+console.log("Task 15 Results:");
+console.log(`Sum of ${number1} and ${number2} is: ${sum1}`);
+console.log(`Difference of ${number1} and ${number2} is: ${difference}`);
+console.log(`Multiple of ${number1} and ${number2} is: ${multiple}`);
+console.log(`Division of ${number1} and ${number2} is: ${division}`);
+console.log(`Remind of ${number1} and ${number2} is: ${remind}`);
+
+// comparison and logical operators
+
+let num7 = 10;
+let num8 = 20;
+
+console.log("Task 16 Results:");
+console.log(`Is ${num7} greater than ${num8} : ${num7 > num8}`);
+console.log(`Is ${num7} less than ${num8} : ${num7 < num8}`);
+console.log(`Is ${num7} greater than or equal to ${num8} : ${num7 >= num8}`);
+console.log(`Is ${num7} less than or equal to ${num8} : ${num7 <= num8}`);
+console.log(`Is ${num7} equal to ${num8} : ${num7 == num8}`);
+console.log(`Is ${num7} equal to ${num8} : ${num7 === num8}`);
+
+// conditional operator && || !
+
+let condition1 = num7 > 7;
+let condition2 = num8 < 30;
+console.log("Task 17 Results:");
+console.log(`Both conditions are true : ${condition1 && condition2}`);
+console.log(`At least one condition is true : ${condition1 || condition2}`);
+console.log(`Negation of the condition: ${!condition1}`);
+
+// ternary operator
+
+let num9 = 30;
+let num10 = 40;
+
+console.log("Task 18 Results:");
+let result =
+  num9 > num10 ? "Number 1 [ 30 ] is greater" : "Number 2 [ 40 ] is greater";
+console.log(result);
