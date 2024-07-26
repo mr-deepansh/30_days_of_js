@@ -1,0 +1,7 @@
+# Ignore all directories named main followed by a number up to 100
+[0-9]*/     # Matches main/0 to main/9 and main/10 to main/99, etc.
+main/100/
+
+# Ignore all PDF files inside those directories
+[0-9]*/**/*.pdf
+100/**/*.pdf
