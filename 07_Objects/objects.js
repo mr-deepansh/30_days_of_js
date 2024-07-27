@@ -78,7 +78,7 @@ console.log(Object.values(book));
 // Feature Request Scripts
 
 // 1. Book Object Script
-console.log("Feature Request 1: Book Object Script");
+console.log("\n Feature Request 1: Book Object Script");
 let bookObjectScript = {
   title: "The Odyssey",
   author: "Homer",
@@ -96,7 +96,7 @@ bookObjectScript.updateYear(700);
 console.log(bookObjectScript);
 
 // 2. Library Object Script
-console.log("Feature Request 2: Library Object Script");
+console.log("\n Feature Request 2: Library Object Script");
 let libraryObjectScript = {
   name: "Central Library",
   books: [
@@ -109,11 +109,9 @@ let libraryObjectScript = {
 console.log(libraryObjectScript);
 
 // 3. Object Iteration Script
-console.log("Feature Request 3: Object Iteration Script");
-console.log("Using for..in loop:");
+console.log("\n Feature Request 3: Object Iteration Script");
 for (let prop in libraryObjectScript) {
   console.log(`${prop}: ${libraryObjectScript[prop]}`);
 }
-console.log("Using Object.keys and Object.values:");
 console.log(Object.keys(libraryObjectScript));
 console.log(Object.values(libraryObjectScript));
