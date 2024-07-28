@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Manipulation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .box {
+        background-color: #faf9f6;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 600px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #my-para {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      #my-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #my-button:hover {
+        background-color: #0056b3;
+      }
+      .myList {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+        max-width: 600px;
+      }
+      .myList li {
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 5px;
+      }
+      .remove-this {
+        background-color: #ffdddd;
+        padding: 10px;
+        border: 1px solid #ff8888;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      img {
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p id="my-para">This is Original paragraph</p>
+      <button id="my-button">Click Me</button>
+    </div>
+    <ul id="myList" class="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <p class="remove-this">Remove Content Lorem ipsum dolor sit amet.</p>
+    <img
+      src="./vecteezy_3d-javascript-logo-design_12697298.png"
+      alt="old-img"
+      id="img-src"
+      width="200px"
+    />
+    <script src="./dom.js"></script>
+  </body>
+</html>
