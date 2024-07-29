@@ -18,14 +18,21 @@ img.addEventListener("dblclick", () => {
 });
 
 //Task 3: Add a mouseover event listener to an element that changes its background color.
-const box = document.querySelector(".box");
-box.addEventListener("mouseover", () => {
-  box.dataset.originalColor = box.style.backgroundColor;
-  box.style.backgroundColor = "red";
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+  box.dataset.originalColor = window.getComputedStyle(box).backgroundColor;
+
+  box.addEventListener("mouseover", () => {
+    box.style.backgroundColor = "red";
+  });
 });
+
 // Task 4: Add a mouseout event listener to an element that resets its background color.
-box.addEventListener("mouseout", () => {
-  box.style.backgroundColor = box.dataset.originalColor;
+boxes.forEach((box) => {
+  box.addEventListener("mouseout", () => {
+    box.style.backgroundColor = box.dataset.originalColor;
+  });
 });
 
 // Task 5: Add a keydown event listener to an input field that logs the key pressed to the console.
@@ -36,8 +43,8 @@ input.addEventListener("keydown", (e) => {
 
 // Task 6: Add a keyup event listener to an input field that displays the current value in a paragraph.
 const logPara = document.querySelector("#logPara");
-input.addEventListener("keyup", (e) => {
-  logPara.textContent = input.value;
+input.addEventListener("keyup", () => {
+  logPara.textContent = `Your Typed Text is: ${input.value}`;
   console.log(`Current value: ${input.value}`);
 });
 
