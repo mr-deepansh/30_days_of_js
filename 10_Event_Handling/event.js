@@ -62,7 +62,8 @@ form.addEventListener("submit", (e) => {
 const select = document.querySelector("#select");
 const selectPara = document.querySelector("#selectedFruit");
 select.addEventListener("change", (e) => {
-  selectPara.textContent = `Selected value: ${selectedValue}`;
+  selectPara.textContent = `Selected value: ${selectPara.value}`;
+  console.log(`Selected value: ${select.value}`);
 });
 
 // Task 9 : Add a click event listener to a list that logs the text content of the clicked list item using event delegation.
