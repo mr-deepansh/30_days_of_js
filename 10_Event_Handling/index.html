@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | JS</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: #fff5ee; /* Original color */
+        display: inline-block; /* To display boxes in a row */
+        margin: 5px; /* Space between boxes */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p class="para">This is a paragraph</p>
+      <button id="button">Click me</button>
+    </div>
+    <img
+      src="../09_Dom_manipulation/vecteezy_3d-javascript-logo-design_12697298.png"
+      alt="img"
+      width="200"
+      id="imageToToggle"
+      style="width: 200px; height: auto"
+    />
+    <div class="box"></div>
+
+    <div class="CurrValue">
+      <label for="inputText">Full Name:</label>
+      <input type="text" id="inputText" placeholder="Something Type here " />
+      <p id="logPara">Current input value will be displayed here</p>
+    </div>
+    <div class="submitForm">
+      <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+        <br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <br />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="selectBox">
+      <label for="select">Select a fruit:</label>
+      <select id="select">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="mango">Mango</option>
+        <option value="orange">Orange</option>
+      </select>
+      <p id="selectedFruit">Selected fruit will be displayed here</p>
+    </div>
+    <div class="listElement">
+      <ul id="myList">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+      </ul>
+      <button id="addItem">Add List Item</button>
+    </div>
+    <script src="./event.js"></script>
+  </body>
+</html>
