@@ -94,3 +94,64 @@ try {
     console.log("Unexpected Error:", error.message);
   }
 }
+/* Error Handling in Promises : Task 6: Create a promise that randomly resolves or rejects. Use .catch() to handle the rejection and log an appropriate message to the console */
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const randomPromise = new Promise((resolve, reject) => {
+  const randomNumber = getRandomNumber(1, 10);
+  if (randomNumber % 2 === 0) {
+    resolve(randomNumber);
+  } else {
+    reject(new Error("Odd number generated"));
+  }
+});
+randomPromise
+  .then((result) => {
+    console.log("Resolved:", result);
+  })
+  .catch((error) => {
+    console.log("Rejected:", error.message);
+  });
+
+/* Error Handling in Promises: Task 7: Use try-catch within an async function to handle errors from a promise that randomly resolves or rejects, and log the error message */
+async function handleRandomPromise() {
+  try {
+    const result = await randomPromise;
+    console.log("Resolved:", result);
+  } catch (error) {
+    console.log("Rejected:", error.message);
+  }
+}
+handleRandomPromise();
+
+/* Graceful Error Handling in Fetch : Task 8: Use the fetch API to request data from an invalid URL and handle the error using .catch() . Log an appropriate error message to the console */
+const invalidURL = "https://jsonplaceholder.typicode.com/userss";
+fetch(invalidURL)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log("Data:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error.message);
+  });
+
+/* Graceful Error Handling in Fetch : Task 9: Use the fetch API to request data from an invalid URL within an async function and handle the error using try-catch. Log an appropriate error message */
+async function fetchData() {
+  try {
+    const response = await fetch(invalidURL);
+    if (!response.ok) {
+      throw new Error("Method two ! Failed to fetch data");
+    }
+    const data = await response.json();
+    console.log("Data:", data);
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}
+fetchData();
