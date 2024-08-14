@@ -1,4 +1,5 @@
 import _ from "lodash";
+import axios from "axios";
 ///
 
 import { add, person } from "./module1.js";
@@ -38,3 +39,18 @@ const lowerCaseString = "hello world";
 const capitalizedString = _.capitalize(lowerCaseString);
 
 console.log(capitalizedString);
+
+/* Using Third-Party Modules:Task 7: Install a third-party module (e.g., axios ) using npm. Import and use this module to make a network request in a script */
+const url = "https://jsonplaceholder.typicode.com/posts";
+const allPosts = async function fetchData() {
+  try {
+    const response = await axios.get(url);
+    const data = response.data;
+    console.log("GET response data:", data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+allPosts();
+
+/* Module Bundling (Optional) : Task 8: Use a module bundler like Webpack or Parcel to bundle multiple JavaScript files into a single file. Write a script to demonstrate the bundling process */
