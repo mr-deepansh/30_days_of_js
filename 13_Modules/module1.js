@@ -15,3 +15,12 @@ export const multiply = (a, b) => a * b;
 export const subtract = (a, b) => a - b;
 
 export { add, person };
+
+function divide(a, b) {
+  if (b === 0) {
+    return "Cannot divide by zero";
+  }
+  return a / b;
+}
+
+export default divide;
