@@ -82,3 +82,73 @@ const student4 = new Student3("Jane", 25, 12346);
 const student5 = new Student3("Bob", 35, 12347);
 const student6 = new Student3("Alice", 28, 12348);
 console.log(Student3.studentCount);
+
+/* Getters and Setters :Task 7: Add a getter method to the Person class to return the full name (assume a FirstName and lastName property). Create an instance and log the full name using the getter */
+class Person4 {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const person3 = new Person4("John", "Doe", 30);
+console.log(person3.fullName); // Output: John Doe
+
+// /* Getters and Setters:Task 8: Add a setter method to the Person class to update the name properties
+//  ( FirstName and lastName ). Update the name using the setter and log the updated full name */
+class Person5 {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  set fullName(newName) {
+    const [firstName, lastName] = newName.split(" ");
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+const person4 = new Person5("John", "Doe", 30);
+console.log(person4.fullName); // Output: John Doe
+
+person4.fullName = "Jane Smith";
+console.log(person4.fullName); // Output: Jane Smith
+
+/* Private Fields (Optional): Task 9: Define a class Account with private fields for balance and a method to deposit and withdraw money. Ensure that the balance can only be updated through these methods. */
+class Account {
+  #balance;
+  constructor(initialBalance) {
+    this.#balance = initialBalance;
+  }
+  deposit(amount) {
+    this.#balance += amount;
+    console.log(`Deposited ${amount}. New balance: ${this.#balance}`);
+  }
+  withdraw(amount) {
+    if (amount <= this.#balance) {
+      this.#balance -= amount;
+      console.log(`Withdrawn ${amount}. New balance: ${this.#balance}`);
+    } else {
+      console.log("Insufficient balance");
+    }
+  }
+  get Balance() {
+    return this.#balance;
+  }
+}
+
+const account1 = new Account(1000);
+account1.deposit(500); // Deposited 500. New balance: 1500
+account1.withdraw(200); // Withdrawn 200. New balance: 1300
+console.log(`Your Balance is ${account1.Balance}`); // Output: 1300
