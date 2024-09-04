@@ -32,3 +32,17 @@ let myArray = [1, 2, 3, 4, 5];
 console.log(sumArray(myArray));
 let myArray2 = [10, 20, 30];
 console.log(sumArray(myArray2));
+
+/*  Recursion with Arrays: Task 4: Write a recursive function to find the maximum element in an array. Log the result for a few test cases */
+function findMax(arr) {
+  if (arr.length === 1) {
+    return arr[0];
+  } else {
+    let max = findMax(arr.slice(1));
+    return arr[0] > max ? arr[0] : max;
+  }
+}
+let myArray3 = [1, 7, 3, 4, 5];
+console.log(findMax(myArray3));
+
+/*  String Manipulation with Recursion : Task 5: Write a recursive function to reverse a string. Log the result for a few test cases */
