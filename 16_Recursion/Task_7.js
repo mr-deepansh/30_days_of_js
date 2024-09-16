@@ -23,4 +23,8 @@ function performBinarySearch(arr, target) {
   return binarySearch(arr, target, 0, arr.length - 1);
 }
 // Test cases
+console.log(performBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)); // Output: 2
 console.log(performBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 5)); // Output: 4
+console.log(performBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 9)); // Output: 8
+console.log(performBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 1)); // Output: 0
+console.log(performBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 10)); // Output: -1
